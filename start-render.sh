@@ -15,6 +15,7 @@ if [ -z "${DB_HOST_VALUE}" ] || [ -z "${DB_USER_VALUE}" ] || [ -z "${DB_PASSWORD
 fi
 
 exec odoo \
+  --proxy-mode \
   --http-port="${HTTP_PORT_VALUE}" \
   --db_host="${DB_HOST_VALUE}" \
   --db_port="${DB_PORT_VALUE}" \
