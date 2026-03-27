@@ -3,7 +3,6 @@ services:
     name: fango-food-odoo
     env: docker
     dockerfilePath: ./Dockerfile
-    dockerCommand: odoo --http-port=$PORT --db_host=$DB_HOST --db_port=$DB_PORT --db_user=$DB_USER --db_password=$DB_PASSWORD --database=$DB_NAME --db_sslmode=$DB_SSLMODE
     plan: starter
     autoDeploy: true
     healthCheckPath: /web/login
