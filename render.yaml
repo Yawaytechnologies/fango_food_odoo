@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: fango-food-odoo
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter
+    autoDeploy: true
+    healthCheckPath: /web/login
+    disk:
+      name: odoo-data
+      mountPath: /var/lib/odoo
+      sizeGB: 10
+    envVars:
+      - key: HOST
+        sync: false
+      - key: PORT
+        value: "5432"
+      - key: USER
+        sync: false
+      - key: PASSWORD
+        sync: false
+      - key: PGHOST
+        sync: false
+      - key: PGPORT
+        value: "5432"
+      - key: PGUSER
+        sync: false
+      - key: PGPASSWORD
+        sync: false
+      - key: PGDATABASE
+        sync: false
+      - key: PGSSLMODE
+        value: require
