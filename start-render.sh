@@ -15,6 +15,28 @@ if [ -z "${DB_HOST_VALUE}" ] || [ -z "${DB_USER_VALUE}" ] || [ -z "${DB_PASSWORD
   exit 1
 fi
 
+if [ "${CLEAN_WEB_ASSETS_ON_START:-1}" = "1" ]; then
+  echo "Cleaning stale /web/assets attachments from database..."
+  python3 - <<PY
+import psycopg2
+
+conn = psycopg2.connect(
+    host="${DB_HOST_VALUE}",
+    port="${DB_PORT_VALUE}",
+    user="${DB_USER_VALUE}",
+    password="${DB_PASSWORD_VALUE}",
+    dbname="${DB_NAME_VALUE}",
+    sslmode="${DB_SSLMODE_VALUE}",
+)
+cur = conn.cursor()
+cur.execute("DELETE FROM ir_attachment WHERE url LIKE '/web/assets/%'")
+print(f"deleted_assets_rows={cur.rowcount}")
+conn.commit()
+cur.close()
+conn.close()
+PY
+fi
+
 exec odoo \
   --proxy-mode \
   --data-dir="${DATA_DIR_VALUE}" \
