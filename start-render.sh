@@ -9,6 +9,8 @@ DB_NAME_VALUE="${DB_NAME:-fango_food}"
 DB_SSLMODE_VALUE="${DB_SSLMODE:-require}"
 HTTP_PORT_VALUE="${PORT:-8069}"
 DATA_DIR_VALUE="${DATA_DIR:-/var/lib/odoo/.local/share/Odoo}"
+LIMIT_TIME_REAL_VALUE="${LIMIT_TIME_REAL:-600}"
+LIMIT_TIME_CPU_VALUE="${LIMIT_TIME_CPU:-300}"
 
 if [ -z "${DB_HOST_VALUE}" ] || [ -z "${DB_USER_VALUE}" ] || [ -z "${DB_PASSWORD_VALUE}" ]; then
   echo "Missing required DB env vars. Set DB_HOST/DB_USER/DB_PASSWORD (or HOST/USER/PASSWORD)." >&2
@@ -37,6 +39,23 @@ conn.close()
 PY
 fi
 
+if [ "${RUN_MODULE_REPAIR_ON_START:-0}" = "1" ]; then
+  echo "Running one-time module repair (upgrade all installed modules)..."
+  odoo \
+    --proxy-mode \
+    --data-dir="${DATA_DIR_VALUE}" \
+    --db_host="${DB_HOST_VALUE}" \
+    --db_port="${DB_PORT_VALUE}" \
+    --db_user="${DB_USER_VALUE}" \
+    --db_password="${DB_PASSWORD_VALUE}" \
+    --database="${DB_NAME_VALUE}" \
+    --db_sslmode="${DB_SSLMODE_VALUE}" \
+    --limit-time-real="${LIMIT_TIME_REAL_VALUE}" \
+    --limit-time-cpu="${LIMIT_TIME_CPU_VALUE}" \
+    -u all \
+    --stop-after-init
+fi
+
 exec odoo \
   --proxy-mode \
   --data-dir="${DATA_DIR_VALUE}" \
@@ -46,4 +65,6 @@ exec odoo \
   --db_user="${DB_USER_VALUE}" \
   --db_password="${DB_PASSWORD_VALUE}" \
   --database="${DB_NAME_VALUE}" \
-  --db_sslmode="${DB_SSLMODE_VALUE}"
+  --db_sslmode="${DB_SSLMODE_VALUE}" \
+  --limit-time-real="${LIMIT_TIME_REAL_VALUE}" \
+  --limit-time-cpu="${LIMIT_TIME_CPU_VALUE}"
