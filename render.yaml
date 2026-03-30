@@ -23,3 +23,5 @@ services:
         value: fango_food
       - key: DB_SSLMODE
         value: require
+      - key: WEB_BASE_URL
+        value: https://fango-food-odoo.onrender.com
