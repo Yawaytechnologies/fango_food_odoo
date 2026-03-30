@@ -2,23 +2,28 @@ version: '3.8'
 
 services:
   odoo:
-    image: odoo:17
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: odoo_app
     restart: always
     ports:
       - "8069:8069"
     volumes:
+      - odoo-web-data:/var/lib/odoo
       - ./odoo.conf:/etc/odoo/odoo.conf
       - ./addons:/mnt/extra-addons
       - ./custom-addons:/mnt/custom-addons
     environment:
-      HOST: ${DB_HOST}
-      PORT: ${DB_PORT}
-      USER: ${DB_USER}
-      PASSWORD: ${DB_PASSWORD}
-      PGHOST: ${DB_HOST}
-      PGPORT: ${DB_PORT}
-      PGUSER: ${DB_USER}
-      PGPASSWORD: ${DB_PASSWORD}
-      PGDATABASE: ${DB_NAME}
-      PGSSLMODE: ${DB_SSLMODE}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: ${DB_NAME}
+      DB_SSLMODE: ${DB_SSLMODE}
+      CLEAN_WEB_ASSETS_ON_START: 0
+      AUTO_INSTALL_ON_START: 0
+      PORT: 8069
+
+volumes:
+  odoo-web-data:

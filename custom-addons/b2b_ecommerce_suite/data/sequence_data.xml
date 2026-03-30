@@ -1,8 +1,0 @@
-<odoo>
-    <record id="seq_b2b_signup_request" model="ir.sequence">
-        <field name="name">B2B Signup Request</field>
-        <field name="code">b2b.signup.request</field>
-        <field name="prefix">B2BREQ/</field>
-        <field name="padding">5</field>
-    </record>
-</odoo>

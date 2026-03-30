@@ -1,4 +1,0 @@
-<odoo>
-    <menuitem id="menu_b2b_root" name="B2B Ecommerce" sequence="40" groups="b2b_ecommerce_suite.group_b2b_manager"/>
-    <menuitem id="menu_b2b_signup_requests" name="Signup Requests" parent="menu_b2b_root" action="action_b2b_signup_requests" sequence="10" groups="b2b_ecommerce_suite.group_b2b_manager"/>
-</odoo>

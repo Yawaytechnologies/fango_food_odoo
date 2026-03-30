@@ -1,3 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_b2b_signup_request_user,b2b.signup.request.user,model_b2b_signup_request,base.group_user,1,1,1,0
-access_b2b_signup_request_manager,b2b.signup.request.manager,model_b2b_signup_request,b2b_ecommerce_suite.group_b2b_manager,1,1,1,1

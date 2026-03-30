@@ -3,6 +3,7 @@
 ## Production PostgreSQL (Render)
 
 This project is set to connect Odoo to Render PostgreSQL with SSL using environment variables.
+The startup path now locks Odoo to the `fango_food` database only and auto-installs the B2B module stack into that same database if it is missing.
 
 ### 1. Set database env values
 
@@ -47,13 +48,15 @@ Create a new Render Blueprint service from this repo and set these environment v
 
 ## B2B Food Ecommerce Setup
 
-After first login, install these apps:
+The custom module is included in this repo at `custom-addons/b2b_ecommerce_suite` and is now loaded by the Render startup path through `/etc/odoo/odoo.conf`.
+On startup, the service will bootstrap or install these apps directly into `fango_food` if they are missing:
 
-- Website
-- eCommerce
+- Website / eCommerce
 - Sales
 - Invoicing
 - Inventory
+- Payment
+- B2B Ecommerce Suite
 
 Then enable these for B2B workflow:
 
