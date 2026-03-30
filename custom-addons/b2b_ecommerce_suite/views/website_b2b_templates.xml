@@ -1,0 +1,462 @@
+<odoo>
+    <template id="b2b_layout_footer" inherit_id="website.layout" name="Fango Custom Footer">
+        <xpath expr="//div[@id='wrapwrap']" position="inside">
+            <footer class="fango-site-footer mt-5" id="fango_site_footer">
+                <div class="container py-5">
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-6">
+                            <h5 class="fango-footer-title">Useful Links</h5>
+                            <ul class="list-unstyled mb-0 fango-footer-links">
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/about-us">About us</a></li>
+                                <li><a href="/shop">Products</a></li>
+                                <li><a href="/services">Services</a></li>
+                                <li><a href="/legal">Legal</a></li>
+                                <li><a href="/contactus">Contact us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-5 col-md-6">
+                            <h5 class="fango-footer-title">About us</h5>
+                            <p class="mb-0 text-muted">
+                                We are a team of passionate people whose goal is to improve everyone's life through disruptive products.
+                                We build great products to solve your business problems.
+                            </p>
+                            <p class="mb-0 mt-3 text-muted">
+                                Our products are designed for small to medium size companies willing to optimize their performance.
+                            </p>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <h5 class="fango-footer-title">Connect with us</h5>
+                            <div class="fango-contact-lines">
+                                <a href="/contactus">Contact us</a>
+                                <a href="mailto:info@yourcompany.example.com">info@yourcompany.example.com</a>
+                                <a href="tel:+15555555556">+1 555-555-5556</a>
+                            </div>
+                            <div class="mt-4">
+                                <h6 class="text-uppercase small fw-bold mb-2">Follow us</h6>
+                                <p class="mb-0 text-muted">Copyright Company name</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </xpath>
+    </template>
+
+    <template id="homepage_override" inherit_id="website.homepage" name="Fango Homepage Override">
+        <xpath expr="//div[@id='wrap']" position="replace">
+            <div id="wrap" class="oe_structure b2b-page fango-homepage">
+                <section class="b2b-hero fango-home-hero py-5">
+                    <div class="container">
+                        <div class="row align-items-center g-4">
+                            <div class="col-lg-7">
+                                <span class="badge rounded-pill bg-light text-dark mb-3">Fango Food Commerce</span>
+                                <h1 class="b2b-title display-4 mb-3">Disruptive products for modern food and wholesale businesses.</h1>
+                                <p class="lead mb-4">We help small and medium size companies improve performance with practical ecommerce, B2B ordering, and business-ready operations.</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a class="b2b-btn b2b-btn-primary" href="/shop">Shop Products</a>
+                                    <a class="b2b-btn b2b-btn-secondary" href="/b2b">Open B2B Portal</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="b2b-kpi mb-3">
+                                    <h5 class="mb-1">About us</h5>
+                                    <p class="mb-0 text-muted">We are a team of passionate people whose goal is to improve everyone's life through disruptive products.</p>
+                                </div>
+                                <div class="b2b-kpi mb-3">
+                                    <h5 class="mb-1">Products</h5>
+                                    <p class="mb-0 text-muted">Our products are designed for small to medium size companies willing to optimize their performance.</p>
+                                </div>
+                                <div class="b2b-kpi">
+                                    <h5 class="mb-1">Contact</h5>
+                                    <p class="mb-0 text-muted">info@yourcompany.example.com<br/>+1 555-555-5556</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="py-5">
+                    <div class="container">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="b2b-flow-card h-100">
+                                    <div class="b2b-flow-step">1</div>
+                                    <h5>Shop</h5>
+                                    <p class="mb-0 text-muted">Browse products and place direct orders through the website storefront.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="b2b-flow-card h-100">
+                                    <div class="b2b-flow-step">2</div>
+                                    <h5>B2B Portal</h5>
+                                    <p class="mb-0 text-muted">Register business buyers, approve accounts, and offer wholesale ordering flows.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="b2b-flow-card h-100">
+                                    <div class="b2b-flow-step">3</div>
+                                    <h5>Contact us</h5>
+                                    <p class="mb-0 text-muted">Reach the team for product, service, and business inquiries in one place.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="pb-5">
+                    <div class="container">
+                        <div class="b2b-panel p-4 p-md-5">
+                            <div class="row align-items-center g-4">
+                                <div class="col-lg-8">
+                                    <span class="badge rounded-pill bg-light text-dark mb-3">Useful Links</span>
+                                    <h2 class="b2b-title h2 mb-3">Everything important is one click away.</h2>
+                                    <p class="text-muted mb-0">Use the primary website sections to learn more about the company, browse products, review services, and reach the team.</p>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="fango-home-links d-grid gap-2">
+                                        <a class="b2b-btn b2b-btn-primary text-center" href="/about-us">About us</a>
+                                        <a class="b2b-btn text-center fango-link-btn" href="/services">Services</a>
+                                        <a class="b2b-btn text-center fango-link-btn" href="/contactus">Contact us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="b2b_home_page" name="B2B Commerce Home">
+        <t t-call="website.layout">
+            <div class="b2b-page py-4 py-md-5">
+                <div class="container">
+                    <section class="b2b-hero mb-4 mb-md-5">
+                        <div class="row align-items-center">
+                            <div class="col-lg-7">
+                                <span class="badge rounded-pill bg-light text-dark mb-3">B2B Commerce Portal</span>
+                                <h1 class="b2b-title display-5 mb-3">Wholesale Ordering, Credit Terms, and Account Approval in One Flow</h1>
+                                <p class="lead mb-4">Build company accounts, offer contract pricing, and let buyers self-serve from catalog to invoice while admin keeps full approval control.</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a class="b2b-btn b2b-btn-primary" href="/b2b/register">Request Business Account</a>
+                                    <a class="b2b-btn b2b-btn-secondary" href="/shop">Browse Catalog</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 mt-4 mt-lg-0">
+                                <div class="b2b-kpi mb-3">
+                                    <h5 class="mb-1">Buyer Experience</h5>
+                                    <p class="mb-0 text-muted">Fast reorder, negotiated pricing, and role-based account access.</p>
+                                </div>
+                                <div class="b2b-kpi mb-3">
+                                    <h5 class="mb-1">Operations</h5>
+                                    <p class="mb-0 text-muted">Inventory sync, quotation-to-order pipeline, and invoice tracking.</p>
+                                </div>
+                                <div class="b2b-kpi">
+                                    <h5 class="mb-1">Finance</h5>
+                                    <p class="mb-0 text-muted">Credit limits, payment terms, receivables visibility.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-4 mb-md-5">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h2 class="h3 mb-0">Single Business Flow</h2>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="b2b-flow-card">
+                                    <div class="b2b-flow-step">1</div>
+                                    <h5>Company Registration</h5>
+                                    <p class="mb-0 text-muted">Buyer submits business details on the B2B signup form.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="b2b-flow-card">
+                                    <div class="b2b-flow-step">2</div>
+                                    <h5>Admin Approval</h5>
+                                    <p class="mb-0 text-muted">Admin validates request, assigns terms, and activates the portal account.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="b2b-flow-card">
+                                    <div class="b2b-flow-step">3</div>
+                                    <h5>Order &amp; Fulfill</h5>
+                                    <p class="mb-0 text-muted">User places bulk orders; stock and delivery operations run in Inventory.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="b2b-flow-card">
+                                    <div class="b2b-flow-step">4</div>
+                                    <h5>Invoice &amp; Collect</h5>
+                                    <p class="mb-0 text-muted">Accounting issues invoices and tracks payment against terms.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="b2b-panel p-4 p-md-5">
+                        <div class="row align-items-center">
+                            <div class="col-lg-8">
+                                <h2 class="h3 mb-2">Start With the Right Entry Point</h2>
+                                <p class="text-muted mb-0">Use registration for new companies, login for approved buyers, and catalog for direct product discovery.</p>
+                            </div>
+                            <div class="col-lg-4 mt-3 mt-lg-0 text-lg-end">
+                                <a class="b2b-btn b2b-btn-primary me-2" href="/b2b/login">B2B Login</a>
+                                <a class="b2b-btn b2b-btn-secondary text-dark border-0" style="background:#f7f3eb" href="/b2b/register">Signup</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="about_us_page" name="About Us Page">
+        <t t-call="website.layout">
+            <div class="b2b-page py-5">
+                <div class="container">
+                    <section class="b2b-panel p-4 p-md-5">
+                        <span class="badge rounded-pill bg-light text-dark mb-3">About us</span>
+                        <h1 class="b2b-title h2 mb-3">Built for growing companies that need reliable digital commerce.</h1>
+                        <p class="lead text-muted">
+                            We are a team of passionate people whose goal is to improve everyone's life through disruptive products.
+                            We build great products to solve your business problems.
+                        </p>
+                        <p class="mb-0 text-muted">
+                            Our products are designed for small to medium size companies willing to optimize their performance.
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="services_page" name="Services Page">
+        <t t-call="website.layout">
+            <div class="b2b-page py-5">
+                <div class="container">
+                    <section class="b2b-panel p-4 p-md-5">
+                        <span class="badge rounded-pill bg-light text-dark mb-3">Services</span>
+                        <h1 class="b2b-title h2 mb-4">Commerce, operations, and account workflows in one place.</h1>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="b2b-flow-card h-100">
+                                    <h5>Website Sales</h5>
+                                    <p class="mb-0 text-muted">Product discovery, shopping flow, and self-service ordering.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="b2b-flow-card h-100">
+                                    <h5>B2B Portal</h5>
+                                    <p class="mb-0 text-muted">Business registration, approval, negotiated pricing, and account access.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="b2b-flow-card h-100">
+                                    <h5>Order to Invoice</h5>
+                                    <p class="mb-0 text-muted">Inventory coordination, invoice generation, and payment tracking.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="legal_page" name="Legal Page">
+        <t t-call="website.layout">
+            <div class="b2b-page py-5">
+                <div class="container">
+                    <section class="b2b-panel p-4 p-md-5">
+                        <span class="badge rounded-pill bg-light text-dark mb-3">Legal</span>
+                        <h1 class="b2b-title h2 mb-3">Website terms and business information.</h1>
+                        <p class="text-muted mb-3">This page can be expanded with company policies, terms of sale, returns, privacy, and compliance information.</p>
+                        <ul class="mb-0 text-muted ps-3">
+                            <li>Company name</li>
+                            <li>Contact email: info@yourcompany.example.com</li>
+                            <li>Phone: +1 555-555-5556</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="b2b_register_page" name="B2B Register Page">
+        <t t-call="website.layout">
+            <div class="b2b-page py-5">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-9">
+                            <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-3">
+                                <div>
+                                    <h1 class="b2b-title h2 mb-1">Create B2B Account Request</h1>
+                                    <p class="text-muted mb-0">Admin verifies each company before account activation.</p>
+                                </div>
+                                <a href="/b2b/login" class="btn btn-outline-dark">Already approved? Sign in</a>
+                            </div>
+
+                            <t t-if="error">
+                                <div class="alert alert-danger" role="alert">
+                                    <t t-esc="error"/>
+                                </div>
+                            </t>
+
+                            <form action="/b2b/register/submit" method="post" class="b2b-panel p-4 b2b-register">
+                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Company Name *</label>
+                                        <input type="text" class="form-control" name="company_name" t-att-value="values.get('company_name', '')" required="required"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Contact Name *</label>
+                                        <input type="text" class="form-control" name="contact_name" t-att-value="values.get('contact_name', '')" required="required"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Email *</label>
+                                        <input type="email" class="form-control" name="email" t-att-value="values.get('email', '')" required="required"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Phone</label>
+                                        <input type="text" class="form-control" name="phone" t-att-value="values.get('phone', '')"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Website</label>
+                                        <input type="url" class="form-control" name="website" t-att-value="values.get('website', '')"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">GST/VAT</label>
+                                        <input type="text" class="form-control" name="gst_vat" t-att-value="values.get('gst_vat', '')"/>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Business Type</label>
+                                        <select name="business_type" class="form-select">
+                                            <option value="distributor" t-att-selected="values.get('business_type') == 'distributor'">Distributor</option>
+                                            <option value="retailer" t-att-selected="not values.get('business_type') or values.get('business_type') == 'retailer'">Retailer</option>
+                                            <option value="wholesaler" t-att-selected="values.get('business_type') == 'wholesaler'">Wholesaler</option>
+                                            <option value="restaurant" t-att-selected="values.get('business_type') == 'restaurant'">Restaurant</option>
+                                            <option value="other" t-att-selected="values.get('business_type') == 'other'">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Expected Monthly Order Value</label>
+                                        <input type="number" class="form-control" name="monthly_order_value" min="0" step="0.01" t-att-value="values.get('monthly_order_value', '')"/>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Requested Pricelist</label>
+                                        <select name="pricelist_id" class="form-select">
+                                            <option value="">Select Pricelist</option>
+                                            <t t-foreach="pricelists" t-as="pricelist">
+                                                <option t-att-value="pricelist.id" t-att-selected="values.get('pricelist_id') and int(values.get('pricelist_id')) == pricelist.id"><t t-esc="pricelist.name"/></option>
+                                            </t>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Country</label>
+                                        <select name="country_id" class="form-select">
+                                            <option value="">Select Country</option>
+                                            <t t-foreach="countries" t-as="country">
+                                                <option t-att-value="country.id" t-att-selected="values.get('country_id') and int(values.get('country_id')) == country.id"><t t-esc="country.name"/></option>
+                                            </t>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <label class="form-label">Street</label>
+                                        <input type="text" class="form-control" name="street" t-att-value="values.get('street', '')"/>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label">Street 2</label>
+                                        <input type="text" class="form-control" name="street2" t-att-value="values.get('street2', '')"/>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">City</label>
+                                        <input type="text" class="form-control" name="city" t-att-value="values.get('city', '')"/>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">State</label>
+                                        <select name="state_id" class="form-select">
+                                            <option value="">Select State</option>
+                                            <t t-foreach="states" t-as="state">
+                                                <option t-att-value="state.id" t-att-selected="values.get('state_id') and int(values.get('state_id')) == state.id"><t t-esc="state.display_name"/></option>
+                                            </t>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">ZIP</label>
+                                        <input type="text" class="form-control" name="zip" t-att-value="values.get('zip', '')"/>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label">Notes</label>
+                                        <textarea class="form-control" name="notes" rows="4"><t t-esc="values.get('notes', '')"/></textarea>
+                                    </div>
+                                    <div class="col-md-12 d-flex justify-content-end mt-2">
+                                        <button class="btn btn-dark px-4" type="submit">Submit Request</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="b2b_register_thank_you" name="B2B Register Thank You">
+        <t t-call="website.layout">
+            <div class="b2b-page py-5">
+                <div class="container">
+                    <div class="b2b-panel p-5 text-center">
+                        <h2 class="b2b-title mb-2">Request Received</h2>
+                        <p class="text-muted mb-4">Your company profile is under review. We will email login activation once approved by admin.</p>
+                        <a class="btn btn-dark" href="/b2b/login">Go to B2B Login</a>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="b2b_login_page" name="B2B Login Page">
+        <t t-call="website.layout">
+            <div class="b2b-page py-5">
+                <div class="container">
+                    <div class="b2b-login-wrap">
+                        <div class="b2b-panel p-4 p-md-5">
+                            <div class="text-center mb-4">
+                                <h3 class="b2b-title mb-2">B2B Sign In</h3>
+                                <p class="text-muted mb-0">Use your approved account credentials and continue to your business dashboard.</p>
+                            </div>
+                            <t t-if="values.get('error')">
+                                <div class="alert alert-danger" role="alert">
+                                    <t t-esc="values.get('error')"/>
+                                </div>
+                            </t>
+                            <form action="/web/login" method="post" class="b2b-login-form">
+                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                <input type="hidden" name="redirect" t-att-value="values.get('redirect', '/my')"/>
+                                <div class="mb-3">
+                                    <label class="form-label">Email</label>
+                                    <input type="text" name="login" class="form-control" t-att-value="values.get('login', '')" required="required" autocomplete="username"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Password</label>
+                                    <input type="password" name="password" class="form-control" required="required" autocomplete="current-password"/>
+                                </div>
+                                <button class="b2b-btn b2b-btn-primary w-100 text-center border-0" type="submit">Sign In</button>
+                            </form>
+                            <div class="text-center mt-3">
+                                <a class="btn btn-link" href="/web/reset_password">Forgot password?</a>
+                            </div>
+                            <div class="text-center">
+                                <a class="btn btn-link" href="/b2b/register">Need business approval? Register</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

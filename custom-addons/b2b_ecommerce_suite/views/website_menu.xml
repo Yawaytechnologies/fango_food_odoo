@@ -1,0 +1,8 @@
+<odoo>
+    <record id="website_menu_b2b" model="website.menu">
+        <field name="name">B2B Portal</field>
+        <field name="url">/b2b</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence" eval="55"/>
+    </record>
+</odoo>

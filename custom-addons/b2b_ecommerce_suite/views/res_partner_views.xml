@@ -1,0 +1,21 @@
+<odoo>
+    <record id="view_partner_form_inherit_b2b_suite" model="ir.ui.view">
+        <field name="name">res.partner.form.b2b.suite</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/notebook" position="inside">
+                <page string="B2B Profile">
+                    <group>
+                        <field name="x_is_b2b_company"/>
+                        <field name="x_b2b_business_type" invisible="not x_is_b2b_company"/>
+                        <field name="property_product_pricelist" invisible="not x_is_b2b_company"/>
+                        <field name="property_payment_term_id" invisible="not x_is_b2b_company"/>
+                        <field name="x_credit_limit" invisible="not x_is_b2b_company"/>
+                        <field name="x_payment_term_notes" invisible="not x_is_b2b_company"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
